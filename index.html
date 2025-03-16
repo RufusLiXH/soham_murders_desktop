@@ -19,11 +19,22 @@
             display: flex;
             width: 100%;
         }
-        .document {
-            flex: 1;
-            padding: 20px;
+        .left-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
             overflow-y: auto;
             border-right: 2px solid #ddd;
+        }
+        .document {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            border-bottom: 2px solid #ddd;
+        }
+        .sidebar {
+            padding: 20px;
+            background-color: #f4f4f4;
         }
         .chatbot {
             flex: 1;
@@ -37,35 +48,63 @@
             min-height: 700px;
             border: none;
         }
+        h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="document">
-            <h2>Soham Murders - Interrogation Evidence Document</h2>
-            <h3>1. Forensic Botany Evidence</h3>
-            <p>Plant material, including nettles and other local flora, was found on Ian Huntley’s vehicle. This evidence indicated that his car had been driven to the area where the victims' bodies were later discovered. The presence of these plants helped forensic experts narrow down the search area and linked Huntley to the crime scene.</p>
-            <h3>2. Fiber Evidence</h3>
-            <p>Fibers matching the victims’ clothing were discovered in Huntley’s home and car. This evidence strongly suggested that Holly Wells and Jessica Chapman had been inside Huntley’s residence.</p>
-            <h3>3. DNA Evidence</h3>
-            <p>Biological samples retrieved from Huntley’s home and car matched the victims' DNA. This forensic proof confirmed the presence of the victims in Huntley’s property, further disproving his denial of involvement.</p>
-            <h3>4. Suspicious Cleaning Activities</h3>
-            <p>Witnesses reported that Huntley thoroughly cleaned his house and car shortly after the disappearance of the girls. Such behavior raised suspicions, as excessive cleaning is often an attempt to eliminate forensic evidence.</p>
-            <h3>5. Huntley’s Media Interviews and Statements</h3>
-            <p>Huntley willingly gave interviews to the media, attempting to insert himself into the investigation. His nervous demeanor, inconsistencies in his story, and efforts to portray himself as helpful raised concerns among investigators, leading them to scrutinize his involvement.</p>
-            <h3>6. Alibi Provided by Maxine Carr</h3>
-            <p>Maxine Carr, Huntley’s girlfriend, initially provided an alibi stating she was with him at the time of the murders. However, her claims were later proven false, and she admitted to lying. Her deception further implicated Huntley, as it suggested an attempt to cover up the crime.</p>
-            <h3>7. Location of the Victims’ Bodies</h3>
-            <p>The girls' bodies were found in a remote, wooded area near Lakenheath, a location Huntley had access to. The forensic examination of the scene provided evidence that the bodies had been transported there after their deaths, and the connection between the site and Huntley strengthened the case against him.</p>
-            <h3>8. Behavioral Analysis</h3>
-            <p>Experts analyzed Huntley’s behavior before and after the disappearance, noting signs of deception and guilt. His excessive involvement in the search, unusual emotional responses, and inconsistencies in his testimony were all indicative of a person attempting to manipulate the investigation.</p>
+        <!-- 左侧：Document 在上，Sidebar 在下 -->
+        <div class="left-column">
+            <div class="document">
+                <h2>Soham Murders - Interrogation Evidence Document</h2>
+                <h3>1. Forensic Botany Evidence</h3>
+                <p><mark>Plant material, including nettles and other local flora, was found on Ian Huntley’s vehicle.</mark> This evidence indicated that his car had been driven to the area where the victims' bodies were later discovered. The presence of these plants helped forensic experts narrow down the search area and linked Huntley to the crime scene.</p>
+                <h3>2. Fiber Evidence</h3>
+                <p><mark>Fibers matching the victims’ clothing were discovered in Huntley’s home and car.</mark> This evidence strongly suggested that Holly Wells and Jessica Chapman had been inside Huntley’s residence.</p>
+                <h3>3. DNA Evidence</h3>
+                <p><mark>Biological samples retrieved from Huntley’s home and car matched the victims' DNA.</mark> This forensic proof confirmed the presence of the victims in Huntley’s property, further disproving his denial of involvement.</p>
+                <h3>4. Suspicious Cleaning Activities</h3>
+                <p><mark>Witnesses reported that Huntley thoroughly cleaned his house and car shortly after the disappearance of the girls.</mark> Such behavior raised suspicions, as excessive cleaning is often an attempt to eliminate forensic evidence.</p>
+                <h3>5. Huntley’s Media Interviews and Statements</h3>
+                <p><mark>Huntley willingly gave interviews to the media, attempting to insert himself into the investigation.</mark> His nervous demeanor, inconsistencies in his story, and efforts to portray himself as helpful raised concerns among investigators, leading them to scrutinize his involvement.</p>
+                <h3>6. Alibi Provided by Maxine Carr</h3>
+                <p><mark>Maxine Carr, Huntley’s girlfriend, initially provided an alibi stating she was with him at the time of the murders.</mark> However, her claims were later proven false, and she admitted to lying. Her deception further implicated Huntley, as it suggested an attempt to cover up the crime.</p>
+                <h3>7. Location of the Victims’ Bodies</h3>
+                <p>The girls' bodies were found in a remote, wooded area near Lakenheath, a location Huntley had access to. <mark>The forensic examination of the scene provided evidence that the bodies had been transported there after their deaths</mark>, and the connection between the site and Huntley strengthened the case against him.</p>
+                <h3>8. Behavioral Analysis</h3>
+                <p><mark>Experts analyzed Huntley’s behavior before and after the disappearance, noting signs of deception and guilt.</mark> His excessive involvement in the search, unusual emotional responses, and inconsistencies in his testimony were all indicative of a person attempting to manipulate the investigation.</p>
+            </div>
+            <div class="sidebar">
+                <h2>Most Frequent Questions</h2>
+                <ul>
+                    <li>1. What's your name? What did you do on 4 Aug 2002, the day the girls disappeared?</li>
+                    <li>2. There are the girls' DNA and fiber evidence left on your vehicle and your home. How do you explain that?</li>
+                    <li>3. Botanic evidence has shown that your vehicle has been moved to the place where the girls' bodies were found.</li>
+                    <li>4. Why did you clean your home and car thoroughly after the girl went missing? There aren't many coincidences in real life.</li>
+                    <li>5. You are lying because you are hiding the truth.</li>
+                    <li>6. If you plead guilty, your penalty might be lighter.</li>
+                    <li>7. Poor innocent souls, look at what you did to them!</li>
+                </ul>
+            </div>
         </div>
+        
+        <!-- 右侧：Chatbot -->
         <div class="chatbot">
             <iframe
- src="https://udify.app/chatbot/ERU4tHFVNEYwYVRX"
- style="width: 100%; height: 100%; min-height: 700px"
- frameborder="0"
- allow="microphone"></iframe>
+                src="https://udify.app/chatbot/ERU4tHFVNEYwYVRX"
+                style="width: 100%; height: 100%; min-height: 700px"
+                frameborder="0"
+                allow="microphone">
+            </iframe>
         </div>
     </div>
 </body>
